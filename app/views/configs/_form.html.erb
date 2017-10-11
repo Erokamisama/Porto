@@ -1,0 +1,42 @@
+<%= form_with(model: config, local: true) do |form| %>
+  <% if config.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(config.errors.count, "error") %> prohibited this config from being saved:</h2>
+
+      <ul>
+      <% config.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Configuration_Name %>
+    <%= form.text_field :conf_name, id: :config_conf_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Frequency_of_pulls %>
+    <%= form.text_field :conf_repeat_pull, id: :config_conf_repeat_pull %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Frequency_of_push %>
+    <%= form.text_field :conf_repeat_push, id: :config_conf_repeat_push %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Url %>
+    <%= form.text_field :conf_url_pull, id: :config_conf_url_pull %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Type %>
+    <%= form.text_field :conf_type_pull, id: :config_conf_type_pull %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

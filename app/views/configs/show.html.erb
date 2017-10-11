@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Conf name:</strong>
+  <%= @config.conf_name %>
+</p>
+
+<p>
+  <strong>Conf repeat pull:</strong>
+  <%= @config.conf_repeat_pull %>
+</p>
+
+<p>
+  <strong>Conf repeat push:</strong>
+  <%= @config.conf_repeat_push %>
+</p>
+
+<p>
+  <strong>Conf url pull:</strong>
+  <%= @config.conf_url_pull %>
+</p>
+
+<p>
+  <strong>Conf type pull:</strong>
+  <%= @config.conf_type_pull %>
+</p>
+
+<%= link_to 'Edit', edit_config_path(@config) %> |
+<%= link_to 'Back', configs_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Configurations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Configuration name</th>
+      <th>Pull Frequency</th>
+      <th>Push Frequency</th>
+      <th>Url</th>
+      <th>Pull Type</th>
+      <th colspan="10"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @configs.each do |config| %>
+      <tr>
+        <td><%= config.conf_name %></td>
+        <td><%= config.conf_repeat_pull %></td>
+        <td><%= config.conf_repeat_push %></td>
+        <td><%= config.conf_url_pull %></td>
+        <td><%= config.conf_type_pull %></td>
+        <td><%= link_to 'Show', config %></td>
+        <td><%= link_to 'Edit', edit_config_path(config) %></td>
+        <td><%= link_to 'Delete', config, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Configuration', new_config_path %>
