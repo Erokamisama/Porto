@@ -1,0 +1,2 @@
+class RawBody < ApplicationRecord
+end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Raw Bodies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Title</th>
+      <th>Company name</th>
+      <th>Company des</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @raw_bodies.each do |raw_body| %>
+      <tr>
+        <td><%= raw_body.body %></td>
+        <td><%= raw_body.title %></td>
+        <td><%= raw_body.company_name %></td>
+        <td><%= raw_body.company_des %></td>
+        <td><%= link_to 'Show', raw_body %></td>
+        <td><%= link_to 'Edit', edit_raw_body_path(raw_body) %></td>
+        <td><%= link_to 'Destroy', raw_body, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Raw Body', new_raw_body_path %>

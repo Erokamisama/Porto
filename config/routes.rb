@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :raw_bodies
   resources :configs
 
 root to: 'configs#index'

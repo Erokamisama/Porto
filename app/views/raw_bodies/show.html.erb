@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @raw_body.body %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @raw_body.title %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @raw_body.company_name %>
+</p>
+
+<p>
+  <strong>Company des:</strong>
+  <%= @raw_body.company_des %>
+</p>
+
+<%= link_to 'Edit', edit_raw_body_path(@raw_body) %> |
+<%= link_to 'Back', raw_bodies_path %>
